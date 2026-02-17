@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dspm-devsecops"
+version = "0.1.1"
+description = "DSPM + DevSecOps evidence pipelines with serverless (ephemeral compute) posture checks"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+dspm-devsecops = "dspm_devsecops.cli:main"
