@@ -1,0 +1,23 @@
+service: dspm-devsecops-demo
+
+provider:
+  name: aws
+  runtime: python3.11
+  stage: dev
+  region: us-east-1
+
+functions:
+  ingest:
+    handler: handler.ingest
+    events:
+      - s3:
+          bucket: demo-bucket
+          event: s3:ObjectCreated:*
+    environment:
+      API_KEY: "DO_NOT_HARDCODE"
+  api:
+    handler: handler.api
+    events:
+      - http:
+          path: /risk
+          method: get

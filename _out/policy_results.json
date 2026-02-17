@@ -1,0 +1,252 @@
+[
+  {
+    "asset_id": "cloud:aws:s3:customer-exports",
+    "gate": {
+      "status": "PASS",
+      "matched": [],
+      "total_rules": 4,
+      "matched_rules": 0
+    },
+    "decisions": [
+      {
+        "name": "deny_high_pii_public_exposure",
+        "action": "fail_pipeline",
+        "severity": "CRITICAL",
+        "matched": false,
+        "reason": "no_match"
+      },
+      {
+        "name": "deny_regulated_over_90",
+        "action": "fail_pipeline",
+        "severity": "CRITICAL",
+        "matched": false,
+        "reason": "no_match"
+      },
+      {
+        "name": "warn_cross_tenant_access",
+        "action": "warn",
+        "severity": "HIGH",
+        "matched": false,
+        "reason": "no_match"
+      },
+      {
+        "name": "warn_public_api_gateway",
+        "action": "warn",
+        "severity": "MEDIUM",
+        "matched": false,
+        "reason": "no_match"
+      }
+    ]
+  },
+  {
+    "asset_id": "cloud:azure:blob:marketing-drop",
+    "gate": {
+      "status": "PASS",
+      "matched": [],
+      "total_rules": 4,
+      "matched_rules": 0
+    },
+    "decisions": [
+      {
+        "name": "deny_high_pii_public_exposure",
+        "action": "fail_pipeline",
+        "severity": "CRITICAL",
+        "matched": false,
+        "reason": "no_match"
+      },
+      {
+        "name": "deny_regulated_over_90",
+        "action": "fail_pipeline",
+        "severity": "CRITICAL",
+        "matched": false,
+        "reason": "no_match"
+      },
+      {
+        "name": "warn_cross_tenant_access",
+        "action": "warn",
+        "severity": "HIGH",
+        "matched": false,
+        "reason": "no_match"
+      },
+      {
+        "name": "warn_public_api_gateway",
+        "action": "warn",
+        "severity": "MEDIUM",
+        "matched": false,
+        "reason": "no_match"
+      }
+    ]
+  },
+  {
+    "asset_id": "cloud:gcp:gcs:analytics-lake",
+    "gate": {
+      "status": "PASS",
+      "matched": [],
+      "total_rules": 4,
+      "matched_rules": 0
+    },
+    "decisions": [
+      {
+        "name": "deny_high_pii_public_exposure",
+        "action": "fail_pipeline",
+        "severity": "CRITICAL",
+        "matched": false,
+        "reason": "no_match"
+      },
+      {
+        "name": "deny_regulated_over_90",
+        "action": "fail_pipeline",
+        "severity": "CRITICAL",
+        "matched": false,
+        "reason": "no_match"
+      },
+      {
+        "name": "warn_cross_tenant_access",
+        "action": "warn",
+        "severity": "HIGH",
+        "matched": false,
+        "reason": "no_match"
+      },
+      {
+        "name": "warn_public_api_gateway",
+        "action": "warn",
+        "severity": "MEDIUM",
+        "matched": false,
+        "reason": "no_match"
+      }
+    ]
+  },
+  {
+    "asset_id": "cloud:aws:rds:payments",
+    "gate": {
+      "status": "FAIL",
+      "matched": [
+        {
+          "name": "deny_regulated_over_90",
+          "action": "fail_pipeline",
+          "severity": "CRITICAL",
+          "matched": true,
+          "reason": "Regulated data requires risk < 90"
+        }
+      ],
+      "total_rules": 4,
+      "matched_rules": 1
+    },
+    "decisions": [
+      {
+        "name": "deny_high_pii_public_exposure",
+        "action": "fail_pipeline",
+        "severity": "CRITICAL",
+        "matched": false,
+        "reason": "no_match"
+      },
+      {
+        "name": "deny_regulated_over_90",
+        "action": "fail_pipeline",
+        "severity": "CRITICAL",
+        "matched": true,
+        "reason": "Regulated data requires risk < 90"
+      },
+      {
+        "name": "warn_cross_tenant_access",
+        "action": "warn",
+        "severity": "HIGH",
+        "matched": false,
+        "reason": "no_match"
+      },
+      {
+        "name": "warn_public_api_gateway",
+        "action": "warn",
+        "severity": "MEDIUM",
+        "matched": false,
+        "reason": "no_match"
+      }
+    ]
+  },
+  {
+    "asset_id": "cloud:ibm:cos:hr-archive",
+    "gate": {
+      "status": "WARN",
+      "matched": [
+        {
+          "name": "warn_cross_tenant_access",
+          "action": "warn",
+          "severity": "HIGH",
+          "matched": true,
+          "reason": "Cross-tenant exposure detected at elevated risk"
+        }
+      ],
+      "total_rules": 4,
+      "matched_rules": 1
+    },
+    "decisions": [
+      {
+        "name": "deny_high_pii_public_exposure",
+        "action": "fail_pipeline",
+        "severity": "CRITICAL",
+        "matched": false,
+        "reason": "no_match"
+      },
+      {
+        "name": "deny_regulated_over_90",
+        "action": "fail_pipeline",
+        "severity": "CRITICAL",
+        "matched": false,
+        "reason": "no_match"
+      },
+      {
+        "name": "warn_cross_tenant_access",
+        "action": "warn",
+        "severity": "HIGH",
+        "matched": true,
+        "reason": "Cross-tenant exposure detected at elevated risk"
+      },
+      {
+        "name": "warn_public_api_gateway",
+        "action": "warn",
+        "severity": "MEDIUM",
+        "matched": false,
+        "reason": "no_match"
+      }
+    ]
+  },
+  {
+    "asset_id": "cloud:aws:logs:lambda-auth",
+    "gate": {
+      "status": "PASS",
+      "matched": [],
+      "total_rules": 4,
+      "matched_rules": 0
+    },
+    "decisions": [
+      {
+        "name": "deny_high_pii_public_exposure",
+        "action": "fail_pipeline",
+        "severity": "CRITICAL",
+        "matched": false,
+        "reason": "no_match"
+      },
+      {
+        "name": "deny_regulated_over_90",
+        "action": "fail_pipeline",
+        "severity": "CRITICAL",
+        "matched": false,
+        "reason": "no_match"
+      },
+      {
+        "name": "warn_cross_tenant_access",
+        "action": "warn",
+        "severity": "HIGH",
+        "matched": false,
+        "reason": "no_match"
+      },
+      {
+        "name": "warn_public_api_gateway",
+        "action": "warn",
+        "severity": "MEDIUM",
+        "matched": false,
+        "reason": "no_match"
+      }
+    ]
+  }
+]

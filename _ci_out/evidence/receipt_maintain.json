@@ -1,0 +1,18 @@
+{
+  "inputs": {
+    "drift_window": "demo"
+  },
+  "kind": "MAINTAIN",
+  "outputs": {
+    "base_risk": {
+      "breakdown": {
+        "serverless": 23,
+        "terraform": 13
+      },
+      "normalized_0_100": 60,
+      "total": 36
+    },
+    "gate": "FAIL"
+  },
+  "ts_epoch": 1771303813
+}

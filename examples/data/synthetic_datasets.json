@@ -1,0 +1,19 @@
+{
+  "datasets": [
+    {
+      "name": "pii_customers",
+      "sensitivity": "HIGH",
+      "records": 150000
+    },
+    {
+      "name": "telemetry_logs",
+      "sensitivity": "MEDIUM",
+      "records": 750000
+    },
+    {
+      "name": "public_marketing",
+      "sensitivity": "LOW",
+      "records": 25000
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+tenants:
+  - retail
+  - finance
+  - hr
+
+asset_tenant:
+  cloud:aws:s3:customer-exports: retail
+  cloud:azure:blob:marketing-drop: retail
+  cloud:gcp:gcs:analytics-lake: retail
+  cloud:aws:rds:payments: finance
+  cloud:ibm:cos:hr-archive: hr
+  cloud:aws:logs:lambda-auth: finance
+
+principal_tenant:
+  lambda:ingest: retail
+  lambda:api: finance

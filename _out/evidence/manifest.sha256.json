@@ -1,0 +1,40 @@
+{
+  "entries": [
+    {
+      "path": "/content/drive/MyDrive/DSPM-DevSecOps-EphemeralCompute-EvidencePipeline/_out/scans/serverless_findings.json",
+      "sha256": "8799495659c041295cab8d595543c7460ef96e11e323edb73f9b73473c767da8",
+      "bytes": 2508
+    },
+    {
+      "path": "/content/drive/MyDrive/DSPM-DevSecOps-EphemeralCompute-EvidencePipeline/_out/scans/terraform_findings.json",
+      "sha256": "9d8c4e68723bba7b7f2ce668e7d054681adc7cc026890c14fef5d52342c18764",
+      "bytes": 1091
+    },
+    {
+      "path": "/content/drive/MyDrive/DSPM-DevSecOps-EphemeralCompute-EvidencePipeline/_out/trigger_graph.json",
+      "sha256": "477cd4f71abd49318d86d65356d042ba96f17d334336e2266ae1a52f371eaee4",
+      "bytes": 499
+    },
+    {
+      "path": "/content/drive/MyDrive/DSPM-DevSecOps-EphemeralCompute-EvidencePipeline/_out/risk_score_base.json",
+      "sha256": "fe2fb35e3eac718b9d13aa83f2277474e4dc50416636a71bde156f434cfd266b",
+      "bytes": 107
+    },
+    {
+      "path": "/content/drive/MyDrive/DSPM-DevSecOps-EphemeralCompute-EvidencePipeline/_out/normalized_assets.json",
+      "sha256": "f21ec27060c5802361e17f398db0f4e13ba5cbcc10d72fabc5bc0507d0805830",
+      "bytes": 2944
+    },
+    {
+      "path": "/content/drive/MyDrive/DSPM-DevSecOps-EphemeralCompute-EvidencePipeline/_out/policy_results.json",
+      "sha256": "f046e16576bbb3da4875562f63d934399728f5ba5999533dc9da777c2e299a07",
+      "bytes": 5945
+    },
+    {
+      "path": "/content/drive/MyDrive/DSPM-DevSecOps-EphemeralCompute-EvidencePipeline/_out/gate_status.json",
+      "sha256": "8e9871e75c9a8660a655c8697c08229e6dd9a6cd3c45314a28a86508facd4c56",
+      "bytes": 22
+    }
+  ],
+  "count": 7
+}

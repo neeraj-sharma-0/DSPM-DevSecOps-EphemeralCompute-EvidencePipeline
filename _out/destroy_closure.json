@@ -1,0 +1,11 @@
+{
+  "triggers_deregistered": [
+    "http:public",
+    "eventbus:demo"
+  ],
+  "iam_revoked": [
+    "role:lambda_exec_demo"
+  ],
+  "logs_retention_enforced": true,
+  "closure_proof": "destroy-receipt-v1"
+}

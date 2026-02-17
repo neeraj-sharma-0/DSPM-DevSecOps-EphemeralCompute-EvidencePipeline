@@ -1,0 +1,6 @@
+{"asset_id": "cloud:aws:s3:customer-exports", "provider": "aws", "native_type": "aws_s3_bucket", "text": "customer_email=lmzllou@example.com order_id=12345"}
+{"asset_id": "cloud:azure:blob:marketing-drop", "provider": "azure", "native_type": "azurerm_storage_account", "text": "public brochure content and images"}
+{"asset_id": "cloud:gcp:gcs:analytics-lake", "provider": "gcp", "native_type": "google_storage_bucket", "text": "user=qsifrzz@example.com phone=(477) 583-7085"}
+{"asset_id": "cloud:aws:rds:payments", "provider": "aws", "native_type": "aws_db_instance", "text": "cc=7646648498437542 amount=19.99"}
+{"asset_id": "cloud:ibm:cos:hr-archive", "provider": "ibm", "native_type": "ibm_cos_bucket", "text": "employee_ssn=961-34-1557 name=Jane Doe"}
+{"asset_id": "cloud:aws:logs:lambda-auth", "provider": "aws", "native_type": "aws_cloudwatch_log_group", "text": "token=AKIA7H37VTtQ1NHkXJ6Iy3kGYiYf5km7AhRVTBtwyo5k4l9CrOpY4puP9b5rL2kMPRAG"}

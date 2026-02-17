@@ -1,0 +1,10 @@
+{
+  "inputs": {
+    "iac_root": "/content/drive/MyDrive/DSPM-DevSecOps-EphemeralCompute-EvidencePipeline/examples/iac"
+  },
+  "kind": "CREATE",
+  "outputs": {
+    "scans": "out/scans"
+  },
+  "ts_epoch": 1771303316
+}
