@@ -1,0 +1,40 @@
+{
+  "entries": [
+    {
+      "path": "/tmp/dspm_post3_v1_s1wk3_y5/DSPM-DevSecOps-EphemeralCompute-EvidencePipeline/out/scans/serverless_findings.json",
+      "sha256": "e03f3d440a0d9a78e4336b69ed492507d077b0f5268ac48bbf22c12668a9a488",
+      "bytes": 2543
+    },
+    {
+      "path": "/tmp/dspm_post3_v1_s1wk3_y5/DSPM-DevSecOps-EphemeralCompute-EvidencePipeline/out/scans/terraform_findings.json",
+      "sha256": "df9eb31ee54a2353c6cf26b6d17f8dab00eaeedf1079dabe7adf5dbcac8068fa",
+      "bytes": 1101
+    },
+    {
+      "path": "/tmp/dspm_post3_v1_s1wk3_y5/DSPM-DevSecOps-EphemeralCompute-EvidencePipeline/out/trigger_graph.json",
+      "sha256": "477cd4f71abd49318d86d65356d042ba96f17d334336e2266ae1a52f371eaee4",
+      "bytes": 499
+    },
+    {
+      "path": "/tmp/dspm_post3_v1_s1wk3_y5/DSPM-DevSecOps-EphemeralCompute-EvidencePipeline/out/risk_score_base.json",
+      "sha256": "fe2fb35e3eac718b9d13aa83f2277474e4dc50416636a71bde156f434cfd266b",
+      "bytes": 107
+    },
+    {
+      "path": "/tmp/dspm_post3_v1_s1wk3_y5/DSPM-DevSecOps-EphemeralCompute-EvidencePipeline/out/normalized_assets.json",
+      "sha256": "f21ec27060c5802361e17f398db0f4e13ba5cbcc10d72fabc5bc0507d0805830",
+      "bytes": 2944
+    },
+    {
+      "path": "/tmp/dspm_post3_v1_s1wk3_y5/DSPM-DevSecOps-EphemeralCompute-EvidencePipeline/out/policy_results.json",
+      "sha256": "f046e16576bbb3da4875562f63d934399728f5ba5999533dc9da777c2e299a07",
+      "bytes": 5945
+    },
+    {
+      "path": "/tmp/dspm_post3_v1_s1wk3_y5/DSPM-DevSecOps-EphemeralCompute-EvidencePipeline/out/gate_status.json",
+      "sha256": "8e9871e75c9a8660a655c8697c08229e6dd9a6cd3c45314a28a86508facd4c56",
+      "bytes": 22
+    }
+  ],
+  "count": 7
+}

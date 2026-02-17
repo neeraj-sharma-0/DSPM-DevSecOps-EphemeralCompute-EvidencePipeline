@@ -1,0 +1,2 @@
+[console_scripts]
+dspm-devsecops = dspm_devsecops.cli:main

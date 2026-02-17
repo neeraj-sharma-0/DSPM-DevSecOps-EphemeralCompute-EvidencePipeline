@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "eventbus:demo",
+      "kind": "trigger"
+    },
+    {
+      "id": "lambda:ingest",
+      "kind": "compute"
+    },
+    {
+      "id": "http:public",
+      "kind": "trigger"
+    },
+    {
+      "id": "lambda:api",
+      "kind": "compute"
+    }
+  ],
+  "edges": [
+    {
+      "source": "eventbus:demo",
+      "target": "lambda:ingest",
+      "surface": "event"
+    },
+    {
+      "source": "http:public",
+      "target": "lambda:api",
+      "surface": "public"
+    }
+  ]
+}

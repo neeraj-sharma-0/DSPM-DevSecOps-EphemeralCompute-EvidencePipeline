@@ -1,0 +1,32 @@
+policies:
+  - name: deny_high_pii_public_exposure
+    severity: CRITICAL
+    condition:
+      classification: pii_high
+      exposure: public
+    action: fail_pipeline
+    reason: "PII_HIGH asset exposed via public trigger surface"
+
+  - name: deny_regulated_over_90
+    severity: CRITICAL
+    condition:
+      classification: regulated
+      min_risk: 90
+    action: fail_pipeline
+    reason: "Regulated data requires risk < 90"
+
+  - name: warn_cross_tenant_access
+    severity: HIGH
+    condition:
+      cross_tenant: true
+      min_risk: 70
+    action: warn
+    reason: "Cross-tenant exposure detected at elevated risk"
+
+  - name: warn_public_api_gateway
+    severity: MEDIUM
+    condition:
+      canonical_type: api_gateway
+      exposure: public
+    action: warn
+    reason: "Public API surface requires explicit threat model + logging"
