@@ -1,7 +1,0 @@
-Metadata-Version: 2.4
-Name: dspm-devsecops
-Version: 0.1.1
-Summary: DSPM + DevSecOps evidence pipelines with serverless (ephemeral compute) posture checks
-Requires-Python: >=3.10
-License-File: LICENSE
-Dynamic: license-file
