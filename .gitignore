@@ -208,3 +208,5 @@ __marimo__/
 _ci_out/
 _out/
 out/
+__pycache__/
+*.pyc
