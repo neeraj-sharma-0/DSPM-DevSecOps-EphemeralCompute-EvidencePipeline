@@ -1,8 +1,0 @@
-{
-  "total": 36,
-  "breakdown": {
-    "terraform": 13,
-    "serverless": 23
-  },
-  "normalized_0_100": 60
-}
