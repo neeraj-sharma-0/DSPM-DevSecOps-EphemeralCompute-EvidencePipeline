@@ -1,0 +1,122 @@
+[
+  {
+    "asset_id": "cloud:aws:s3:customer-exports",
+    "provider": "aws",
+    "native_type": "aws_s3_bucket",
+    "canonical_type": "object_storage",
+    "tenant": "retail",
+    "principal": "lambda:ingest",
+    "principal_tenant": "retail",
+    "cross_tenant": false,
+    "classification": "pii_low",
+    "exposure": "event",
+    "risk_0_100": 78,
+    "classification_signals": {
+      "email": 1,
+      "ssn": 0,
+      "cc_like": 0,
+      "phone": 0,
+      "entropy_hi": 0
+    }
+  },
+  {
+    "asset_id": "cloud:azure:blob:marketing-drop",
+    "provider": "azure",
+    "native_type": "azurerm_storage_account",
+    "canonical_type": "object_storage",
+    "tenant": "retail",
+    "principal": "lambda:ingest",
+    "principal_tenant": "retail",
+    "cross_tenant": false,
+    "classification": "public",
+    "exposure": "event",
+    "risk_0_100": 36,
+    "classification_signals": {
+      "email": 0,
+      "ssn": 0,
+      "cc_like": 0,
+      "phone": 0,
+      "entropy_hi": 0
+    }
+  },
+  {
+    "asset_id": "cloud:gcp:gcs:analytics-lake",
+    "provider": "gcp",
+    "native_type": "google_storage_bucket",
+    "canonical_type": "object_storage",
+    "tenant": "retail",
+    "principal": "lambda:ingest",
+    "principal_tenant": "retail",
+    "cross_tenant": false,
+    "classification": "pii_low",
+    "exposure": "event",
+    "risk_0_100": 78,
+    "classification_signals": {
+      "email": 1,
+      "ssn": 0,
+      "cc_like": 0,
+      "phone": 1,
+      "entropy_hi": 0
+    }
+  },
+  {
+    "asset_id": "cloud:aws:rds:payments",
+    "provider": "aws",
+    "native_type": "aws_db_instance",
+    "canonical_type": "relational_db",
+    "tenant": "finance",
+    "principal": "lambda:api",
+    "principal_tenant": "finance",
+    "cross_tenant": false,
+    "classification": "regulated",
+    "exposure": "public",
+    "risk_0_100": 100,
+    "classification_signals": {
+      "email": 0,
+      "ssn": 0,
+      "cc_like": 1,
+      "phone": 0,
+      "entropy_hi": 0
+    }
+  },
+  {
+    "asset_id": "cloud:ibm:cos:hr-archive",
+    "provider": "ibm",
+    "native_type": "ibm_cos_bucket",
+    "canonical_type": "object_storage",
+    "tenant": "hr",
+    "principal": "lambda:ingest",
+    "principal_tenant": "retail",
+    "cross_tenant": true,
+    "classification": "pii_high",
+    "exposure": "event",
+    "risk_0_100": 100,
+    "classification_signals": {
+      "email": 0,
+      "ssn": 1,
+      "cc_like": 0,
+      "phone": 0,
+      "entropy_hi": 0
+    }
+  },
+  {
+    "asset_id": "cloud:aws:logs:lambda-auth",
+    "provider": "aws",
+    "native_type": "aws_cloudwatch_log_group",
+    "canonical_type": "log_store",
+    "tenant": "finance",
+    "principal": "lambda:api",
+    "principal_tenant": "finance",
+    "cross_tenant": false,
+    "classification": "internal",
+    "exposure": "public",
+    "risk_0_100": 60,
+    "classification_signals": {
+      "email": 0,
+      "ssn": 0,
+      "cc_like": 0,
+      "phone": 0,
+      "entropy_hi": 1
+    }
+  }
+]

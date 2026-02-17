@@ -1,0 +1,10 @@
+{
+  "inputs": {
+    "manifest": "manifest.sha256.json"
+  },
+  "kind": "AUDIT",
+  "outputs": {
+    "count": 7
+  },
+  "ts_epoch": 1771303813
+}
