@@ -1,115 +1,108 @@
-# DSPM + DevSecOps: Ephemeral Compute Evidence Pipeline
+# DSPM for DevSecOps Pipelines — Ephemeral Compute, Data Governance, and Evidence
 
-Enterprise-style demonstration of a Data Security Posture Management
-(DSPM) lifecycle integrated with DevSecOps CI gating for
-Infrastructure-as-Code (IaC) and Serverless workloads.
+## Overview
 
-------------------------------------------------------------------------
+Implements DSPM lifecycle controls within DevSecOps pipelines, focusing on **ephemeral compute environments** where sensitive data can be introduced, processed, and unintentionally persisted.
 
-## What This Project Demonstrates
+CI/CD pipelines are a critical but under-governed data surface. Build logs, artifacts, environment variables, and intermediate outputs can expose sensitive data without structured audit or deletion controls.
 
--   IaC scanning (Terraform + Serverless)
--   Canonical asset normalization
--   Deterministic risk computation
--   Policy-as-code gating
--   Evidence manifest generation (SHA256)
--   Lifecycle receipts (create / maintain / audit / destroy)
--   Destroy closure proof
--   CI simulation mode
+This repository applies DSPM principles to **pipeline execution environments**, enabling classification, audit, policy enforcement, and controlled deletion with evidence.
 
-------------------------------------------------------------------------
+---
 
-## Architecture Flow
+## Core Objective
 
-IaC Scan → Normalize Assets → Compute Risk → Evaluate Policy DSL → Gate
-(PASS/FAIL) → Generate Evidence → Lifecycle Receipts
+> Apply DSPM controls to CI/CD pipelines to detect, audit, and control sensitive data exposure, with structured evidence and verifiable cleanup of ephemeral artifacts.
 
-Artifacts are written to `_ci_out/` when executed.
+---
 
-------------------------------------------------------------------------
+## What This Project Does
 
-## Quick Start
+Within a simulated DevSecOps pipeline, the system:
 
-Clone the repository:
+1. **Ingests pipeline inputs**
+   - source files
+   - configuration
+   - environment variables (simulated)
 
-``` bash
-git clone <your-repo-url>
-cd DSPM-DevSecOps-EphemeralCompute-EvidencePipeline
-```
+2. **Classifies data**
+   - sensitivity levels
+   - PII and secrets
+   - ownership and source
 
-Install dependencies (editable install required due to src-layout):
+3. **Processes pipeline stages**
+   - build
+   - test
+   - artifact generation
 
-``` bash
-python -m pip install -U pip
-python -m pip install -r requirements.txt
-python -m pip install -e .
-```
+4. **Audits outputs**
+   - scans logs, artifacts, and intermediate data
+   - computes risk scores and severity
 
-Run CI simulation mode:
+5. **Applies policy gate**
+   - pass/fail based on critical/high thresholds
 
-``` bash
-dspm-devsecops --repo-root . ci --out _ci_out
-```
+6. **Generates evidence artifacts**
+   - CSV audit reports
+   - JSON policy decisions
+   - SHA256 receipts
 
-Alternative invocation:
+7. **Executes cleanup (destroy phase)**
+   - deletes pipeline artifacts and temporary data
+   - records closure with proof-of-absence flag
 
-``` bash
-python -m dspm_devsecops.cli --repo-root . ci --out _ci_out
-```
+---
 
-------------------------------------------------------------------------
+## DSPM Lifecycle Coverage
 
-## Expected Output Structure
+| Stage    | Implementation                                              |
+|----------|-------------------------------------------------------------|
+| Discover | Detection across pipeline inputs and outputs                |
+| Classify | Sensitivity, PII, secrets, owner, source                    |
+| Audit    | Risk scoring across logs, artifacts, and outputs            |
+| Enforce  | Policy gate within pipeline execution                       |
+| Destroy  | Artifact cleanup with count-based verification              |
 
-    _ci_out/
-    ├── scans/
-    │   ├── terraform_findings.json
-    │   └── serverless_findings.json
-    ├── normalized_assets.json
-    ├── risk_score_base.json
-    ├── policy_results.json
-    ├── gate_status.json
-    ├── trigger_graph.json
-    ├── destroy_closure.json
-    └── evidence/
-        ├── manifest.sha256.json
-        ├── receipt_create.json
-        ├── receipt_maintain.json
-        ├── receipt_audit.json
-        └── receipt_destroy.json
+---
 
-The gate result depends on policy rules defined in:
+## Pipeline Risk Surface
 
-    policies/policies.yml
+DevSecOps pipelines can expose sensitive data through:
 
-------------------------------------------------------------------------
+- build logs containing secrets  
+- environment variables in runtime  
+- generated artifacts (binaries, reports)  
+- cached outputs across stages  
 
-## Notebooks
+This repository treats each as a **measurable governance surface**.
 
--   01_Quickstart_Evidence_Pipeline.ipynb
--   02_Policy_Gating_and_Risk.ipynb
--   03_CI_Simulation_Evidence_Artifacts.ipynb
+---
 
-Generate `_ci_out/` before running notebook #3.
+## Destroy Phase
 
-------------------------------------------------------------------------
+Pipeline artifacts are deleted and verified using:
 
-## Testing
+- `count_before`
+- `count_after`
+- `proof_of_absence: true` when `count_after == 0`
 
-``` bash
-pytest -q
-```
+> Verification is **count-based only**.  
+> Persistence in external systems or logs outside pipeline scope is not evaluated.
 
-------------------------------------------------------------------------
+---
 
-## Security Notes
+## Evidence Output
 
--   All data is synthetic.
--   No credentials or live cloud integrations are included.
--   Generated artifacts (`_ci_out/`) are not tracked in version control.
+Artifacts generated per run:
 
-------------------------------------------------------------------------
+- `pipeline_inputs.csv`
+- `classification.csv`
+- `audit_report.csv`
+- `risk_findings.json`
+- `policy_gate.json`
+- `pipeline_metadata.json`
+- `destroy_closure.json`
+- `manifest.json`
+- `receipts.json`
 
-## License
-
-Add your preferred open-source license (e.g., MIT or Apache 2.0).
+Outputs written to:
