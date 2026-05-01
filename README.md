@@ -106,3 +106,62 @@ Artifacts generated per run:
 - `receipts.json`
 
 Outputs written to:
+out/evidence/<pipeline_run_id>/
+
+
+Supports:
+- audit traceability  
+- reproducibility  
+- compliance documentation  
+
+---
+
+## Example Run
+
+- pipeline stages executed: build → test → artifact  
+- records processed: 75  
+- high severity findings: 9  
+- policy gate: FAIL  
+- artifacts generated: yes  
+- destroy phase: completed  
+- count_before: 75  
+- count_after: 0  
+- proof_of_absence: true  
+
+---
+
+## Scope and Limitations
+
+This repository:
+
+- does not integrate with real CI/CD systems (GitHub Actions, Jenkins, etc.)
+- does not validate external log retention systems
+- does not guarantee deletion across distributed storage layers
+
+Focus is limited to:
+- pipeline-level governance simulation  
+- lifecycle control enforcement  
+- structured evidence generation  
+
+---
+
+## Why This Matters
+
+CI/CD pipelines are a high-frequency execution layer where:
+
+- sensitive data can leak rapidly  
+- artifacts persist beyond intended scope  
+- governance controls are inconsistent  
+
+This project demonstrates how DSPM principles can be applied to **pipeline runtime environments**, enabling:
+
+- visibility into data exposure  
+- policy-based control  
+- controlled cleanup  
+- audit-ready evidence  
+
+---
+
+## One-Line Summary
+
+> DSPM governance framework for DevSecOps pipelines with classification, audit, policy enforcement, and verifiable cleanup of ephemeral artifacts.
